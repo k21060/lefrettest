@@ -21,33 +21,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
-    <div id="textbox">
-        <p id="p1" class="text_cat">テキスト1</p>
-    </div>
-
-    <script language="javascript" type="text/javascript">
-
-        // id属性で要素を取得
-
-        $.getJSON("test.json", (data) => {
-            for (i = 0; i < data.csv.length; i++) {
-                // console.log(`id=${data.csv.length}`);
-                // console.log(`id=${data.csv}`);
-                // console.log(`id=${data.csv[i]}`);
-                // ID取得
-                var textbox_element = document.getElementById(`textbox`);
-                // 新しいHTML要素を作成
-                var new_element = document.createElement(`p`);
-                new_element.textContent = `${data.csv[i]}`;
-                // 指定した要素の中の末尾に挿入
-                textbox_element.appendChild(new_element);
-            }
-        });
-
-
-
-
-    </script>
+    <!-- leaflet -->
     <div id="mapid"></div>
     <script src="main.js"></script>
 </body>

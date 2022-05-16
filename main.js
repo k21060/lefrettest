@@ -16,8 +16,6 @@ window.onload = (event) => {
         accessToken: 'pk.eyJ1IjoicGVuZ2luMDMyNSIsImEiOiJjbDI0ajhrdmsyMDNnM2Nta2xob3plcm9oIn0.CRspz6NBRtLga-iCRkAxbg',
     }).addTo(mymap);
 
-    // var elem = document.getElementById("json-data");
-    // var data = JSON.parse(elem.textContent);x
 
     $.getJSON("test.json", (data) => {
         for (i = 0; i < data.csv.length; i++) {
@@ -43,13 +41,5 @@ window.onload = (event) => {
             }
         }
     });
-
-    // if(data[1]==1){
-    //     L.marker([35.432204836911204, 139.39947375369147]).addTo(mymap);
-    // // 海老名SA
-    // } else {
-    //     return;
-    // }
-
 
 }

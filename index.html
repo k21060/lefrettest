@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Leaflet</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <link rel="stylesheet" href="main.css" />
+    <!-- Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+</head>
+
+
+<body>
+    <h1>Leaflet</h1>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <div id="textbox">
+        <p id="p1" class="text_cat">テキスト1</p>
+    </div>
+
+    <script language="javascript" type="text/javascript">
+
+        // id属性で要素を取得
+
+        $.getJSON("test.json", (data) => {
+            for (i = 0; i < data.csv.length; i++) {
+                // console.log(`id=${data.csv.length}`);
+                // console.log(`id=${data.csv}`);
+                // console.log(`id=${data.csv[i]}`);
+                // ID取得
+                var textbox_element = document.getElementById(`textbox`);
+                // 新しいHTML要素を作成
+                var new_element = document.createElement(`p`);
+                new_element.textContent = `${data.csv[i]}`;
+                // 指定した要素の中の末尾に挿入
+                textbox_element.appendChild(new_element);
+            }
+        });
+
+
+
+
+    </script>
+    <div id="mapid"></div>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -21,7 +21,21 @@ window.onload = (event) => {
 
     $.getJSON("test.json", (data) => {
         for (i = 0; i < data.csv.length; i++) {
-            if (data.csv[i] == 1) {
+            if (data.csv[0] == 1) {
+                L.marker([35.432204836911204, 139.39947375369147]).addTo(mymap);
+                // 海老名SA
+            } else {
+                return;
+            }
+
+            if (data.csv[1] == 1) {
+                L.marker([35.432204836911204, 139.39947375369147]).addTo(mymap);
+                // 海老名SA
+            } else {
+                return;
+            }
+
+            if (data.csv[2] == 1) {
                 L.marker([35.432204836911204, 139.39947375369147]).addTo(mymap);
                 // 海老名SA
             } else {

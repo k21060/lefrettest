@@ -22,6 +22,8 @@ for b in file:
 # for b in df:
 #     print(b)
 
+print(file)
+
 
 # directory = [0]*len(df)  
 
@@ -50,3 +52,7 @@ print(directory)
 
 with open('test.json', 'w') as f:
     json.dump(directory, f, ensure_ascii=False)
+
+
+
+# df[0].to_csv("output_pd.csv", encoding="utf_8_sig")

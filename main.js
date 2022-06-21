@@ -34,16 +34,22 @@ let myLines=[
 ]
 
 
+
+
 function plottimestep (mymap,data){
     var keys = Object.keys(data);
 
     console.log(data);
     
     for(let i=0;i<33;i++){
-        if (data[(keys[clicktimestep])][i] == 1) {
+        if (data[keys[clicktimestep]][i] == 1) {
             placename[i] = L.marker(myLines[i]).addTo(mymap);
+        }
     }
 }
+
+
+
 
 function deltimestep (mymap,data){
     $("#delMarker").on('click', function (){
@@ -56,7 +62,6 @@ function deltimestep (mymap,data){
         
     });
 }
-
 
 window.onload = (event) => {
     console.log("onload!!");
@@ -471,7 +476,7 @@ window.onload = (event) => {
     //     // }
     // });
 
-}
+
 
     // let kouhokuDown = null;
     // if (data[(keys[clicktimestep])][0] == 1) {

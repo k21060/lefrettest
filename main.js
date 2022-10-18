@@ -1,5 +1,7 @@
 console.log("Hello,World!");
 
+// x日とy日を取ってきてSA同士の差をとる
+
 let clicktimestep=0;
 let mymap;
 
